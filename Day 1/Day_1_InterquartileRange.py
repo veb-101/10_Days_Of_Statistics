@@ -24,7 +24,6 @@ def find_median(a):
 def interQuartileRange(array):
     array.sort()
     length = len(array)
-    # Q2 = find_median(array)
 
     if length % 2:  # odd length
         lower_half = array[:length//2]
@@ -34,6 +33,7 @@ def interQuartileRange(array):
         upper_half = array[length//2:]
 
     Q1 = find_median(lower_half)
+    # Q2 = find_median(array)
     Q3 = find_median(upper_half)
     return Q3 - Q1
 
